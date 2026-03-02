@@ -1,67 +1,72 @@
 {
   "name": "mfse-agents",
+  "metadata": {
+    "version": "0.1.0",
+    "description": "A collection of specialized agents for Software Factory Michele Ferracin biased"
+  },
   "owner": {
-    "name": "Michele Ferracin"
+    "name": "Michele Ferracin",
+    "email": "michele@micheleferracin.it"
   },
   "plugins": [
     {
       "name": "mfse-00-facilitator",
-      "source": "./",
+      "source": "./agents/mfse-00-facilitator",
       "description": "Facilitator that helps shape requirements into user stories and acceptance criteria"
     },
     {
       "name": "mfse-01-crawler",
-      "source": "./",
+      "source": "./agents/mfse-01-crawler",
       "description": "Fast codebase crawler that gathers information and context about a topic"
     },
     {
       "name": "mfse-01-crawler-azdo",
-      "source": "./",
+      "source": "./agents/mfse-01-crawler-azdo",
       "description": "Azure DevOps crawler for searching work items and wiki pages"
     },
     {
       "name": "mfse-02-azdo-wit",
-      "source": "./",
+      "source": "./agents/mfse-02-azdo-wit",
       "description": "Azure DevOps Boards expert for persisting work items and backlog management"
     },
     {
       "name": "mfse-10-orchestrator",
-      "source": "./",
+      "source": "./agents/mfse-10-orchestrator",
       "description": "Workflow orchestrator coordinating Architect, Coder, and Reviewer agents"
     },
     {
       "name": "mfse-11-architect",
-      "source": "./",
+      "source": "./agents/mfse-11-architect",
       "description": "Lead Architect agent for system design, contracts, and blueprints"
     },
     {
       "name": "mfse-12-coder",
-      "source": "./",
+      "source": "./agents/mfse-12-coder",
       "description": "Expert Developer agent that implements architectural blueprints with TDD"
     },
     {
       "name": "mfse-13-reviewer",
-      "source": "./",
+      "source": "./agents/mfse-13-reviewer",
       "description": "Strict code reviewer auditing against blueprints and best practices"
     },
     {
       "name": "mfse-14-theopus",
-      "source": "./",
+      "source": "./agents/mfse-14-theopus",
       "description": "Ultimate problem solver for exceptionally difficult or bizarre issues"
     },
     {
       "name": "mfse-e2e",
-      "source": "./",
+      "source": "./agents/mfse-e2e",
       "description": "End-to-end orchestrator: from raw idea through requirements, architecture, implementation, and review"
     },
     {
       "name": "mfse-user-stories-writing",
-      "source": "./",
+      "source": "./skills/mfse-user-stories-writing",
       "description": "Create effective User Stories with BDD acceptance criteria (Given/When/Then)"
     },
     {
       "name": "mfse-azure-devops-cli-boards",
-      "source": "./",
+      "source": "./skills/mfse-azure-devops-cli-boards",
       "description": "Manage Azure DevOps Boards work items, queries, and relations via CLI"
     }
   ]

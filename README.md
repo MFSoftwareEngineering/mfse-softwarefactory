@@ -7,7 +7,7 @@ A multi-agent development team for coding agents. Orchestrates requirement shapi
 ### Pipeline Agents (MFSE-0x)
 
 | Agent | Description |
-|-------|-------------|
+| - | - |
 | [mfse-00-facilitator](agents/mfse-00-facilitator/SKILL.md) | Shapes requirements into user stories and acceptance criteria |
 | [mfse-01-crawler](agents/mfse-01-crawler/SKILL.md) | Fast codebase crawler for gathering context |
 | [mfse-01-crawler-azdo](agents/mfse-01-crawler-azdo/SKILL.md) | Azure DevOps crawler for work items and wiki |
@@ -16,7 +16,7 @@ A multi-agent development team for coding agents. Orchestrates requirement shapi
 ### Implementation Team (MFSE-1x)
 
 | Agent | Description |
-|-------|-------------|
+| - | - |
 | [mfse-10-orchestrator](agents/mfse-10-orchestrator/SKILL.md) | Workflow orchestrator coordinating the team |
 | [mfse-11-architect](agents/mfse-11-architect/SKILL.md) | Lead Architect for system design and blueprints |
 | [mfse-12-coder](agents/mfse-12-coder/SKILL.md) | Expert Developer implementing blueprints |
@@ -26,7 +26,7 @@ A multi-agent development team for coding agents. Orchestrates requirement shapi
 ### End-to-End
 
 | Agent | Description |
-|-------|-------------|
+| - | - |
 | [mfse-e2e](agents/mfse-e2e/SKILL.md) | Full pipeline: idea → user story → architecture → code → review |
 
 ### Supporting Skills
@@ -34,7 +34,7 @@ A multi-agent development team for coding agents. Orchestrates requirement shapi
 Skills are lightweight prompts that agents reference for specialized tasks.
 
 | Skill | Used by | Description |
-|-------|---------|-------------|
+| - | - |
 | [mfse-user-stories-writing](skills/mfse-user-stories-writing/SKILL.md) | Facilitator | BDD user story writing with Given/When/Then templates |
 | [mfse-azure-devops-cli-boards](skills/mfse-azure-devops-cli-boards/SKILL.md) | Azdo WIT | Azure DevOps Boards CLI commands for work items |
 
@@ -54,16 +54,7 @@ The team follows a structured pipeline:
 ### GitHub Copilot CLI
 
 ```bash
-/plugin marketplace add phenixita/mfse-agents
-/plugin install mfse-10-orchestrator@mfse-agents
-```
-
-### Claude Code
-
-```bash
-mkdir -p .claude/skills/<agent-name>
-curl -o .claude/skills/<agent-name>/SKILL.md \
-  https://raw.githubusercontent.com/phenixita/pnx-mfse-agents/main/agents/<agent-name>/SKILL.md
+copilot plugin install phenixita/mfse-agents
 ```
 
 ## Contributing
