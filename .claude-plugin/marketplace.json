@@ -1,7 +1,7 @@
 {
   "name": "mfse-agents",
   "metadata": {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A collection of specialized agents for Software Factory Michele Ferracin biased"
   },
   "owner": {
@@ -11,52 +11,52 @@
   "plugins": [
     {
       "name": "mfse-00-facilitator",
-      "source": "./agents/mfse-00-facilitator",
+      "source": "./agents/mfse-00-facilitator/mfse-00-facilitator.agent.md",
       "description": "Facilitator that helps shape requirements into user stories and acceptance criteria"
     },
     {
       "name": "mfse-01-crawler",
-      "source": "./agents/mfse-01-crawler",
+      "source": "./agents/mfse-01-crawler/mfse-01-crawler.agent.md",
       "description": "Fast codebase crawler that gathers information and context about a topic"
     },
     {
       "name": "mfse-01-crawler-azdo",
-      "source": "./agents/mfse-01-crawler-azdo",
+      "source": "./agents/mfse-01-crawler-azdo/mfse-01-crawler-azdo.agent.md",
       "description": "Azure DevOps crawler for searching work items and wiki pages"
     },
     {
       "name": "mfse-02-azdo-wit",
-      "source": "./agents/mfse-02-azdo-wit",
+      "source": "./agents/mfse-02-azdo-wit/mfse-02-azdo-wit.agent.md",
       "description": "Azure DevOps Boards expert for persisting work items and backlog management"
     },
     {
       "name": "mfse-10-orchestrator",
-      "source": "./agents/mfse-10-orchestrator",
+      "source": "./agents/mfse-10-orchestrator/mfse-10-orchestrator.agent.md",
       "description": "Workflow orchestrator coordinating Architect, Coder, and Reviewer agents"
     },
     {
       "name": "mfse-11-architect",
-      "source": "./agents/mfse-11-architect",
+      "source": "./agents/mfse-11-architect/mfse-11-architect.agent.md",
       "description": "Lead Architect agent for system design, contracts, and blueprints"
     },
     {
       "name": "mfse-12-coder",
-      "source": "./agents/mfse-12-coder",
+      "source": "./agents/mfse-12-coder/mfse-12-coder.agent.md",
       "description": "Expert Developer agent that implements architectural blueprints with TDD"
     },
     {
       "name": "mfse-13-reviewer",
-      "source": "./agents/mfse-13-reviewer",
+      "source": "./agents/mfse-13-reviewer/mfse-13-reviewer.agent.md",
       "description": "Strict code reviewer auditing against blueprints and best practices"
     },
     {
       "name": "mfse-14-theopus",
-      "source": "./agents/mfse-14-theopus",
+      "source": "./agents/mfse-14-theopus/mfse-14-theopus.agent.md",
       "description": "Ultimate problem solver for exceptionally difficult or bizarre issues"
     },
     {
       "name": "mfse-e2e",
-      "source": "./agents/mfse-e2e",
+      "source": "./agents/mfse-e2e/mfse-e2e.agent.md",
       "description": "End-to-end orchestrator: from raw idea through requirements, architecture, implementation, and review"
     },
     {
