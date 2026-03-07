@@ -30,7 +30,7 @@ When invoked, strictly follow this step-by-step pipeline:
 0. Dedicated branch: For every new feature request, create a new branch in the format `feature/{short-description}` to keep work organized and isolated.
 
 1. **Requirement Intake:**
-   - If a calling agent (e.g., `MFSE-ExtendedSquad-09-E2E`) provides a pre-approved user story file path, **skip this step and step 3** — read the file and proceed directly to step 2 (Context Discovery).
+   - If a calling agent provides a pre-approved user story file path, **skip this step and step 3** — read the file and proceed directly to step 2 (Context Discovery).
    - Otherwise, ask the user with `askQuestions` where the requirement lives:
      - **User story file** — the user provides a path to a `.userstory.md` file (or similar doc). Read it.
      - **Azure DevOps work item** — the user provides a work item ID. Delegate to `MFSE-ExtendedSquad-01-Azdo-Crawler` to fetch the work item details (title, description, acceptance criteria, links).

@@ -25,12 +25,6 @@ The goal is to help teams move faster and deliver better software by combining A
 | [mfse-extendedsquad-07-reviewer](agents/mfse-extendedsquad-07-reviewer.agent.md) | Audits code against blueprints and conventions |
 | [mfse-extendedsquad-08-theopus](agents/mfse-extendedsquad-08-theopus.agent.md) | Escalation agent for genuinely hard problems |
 
-### End-to-End
-
-| Agent | Description |
-| - | - |
-| [mfse-extendedsquad-09-e2e](agents/mfse-extendedsquad-09-e2e.agent.md) | Full pipeline: idea to user story to architecture to code to review |
-
 ### Skills
 
 Reusable prompt modules that agents compose into their workflows.
@@ -73,7 +67,7 @@ The agents follow a structured pipeline that mirrors a real engineering team:
 6. **Reviewer** audits the result against the blueprint and team conventions
 7. **TheOpus** is called in when the team hits a genuinely hard or unusual problem
 
-The **mfse-extendedsquad-09-e2e** agent chains the full pipeline into a single invocation.
+The full pipeline is run by chaining the Facilitator and Orchestrator agents.
 
 ## Installing
 
