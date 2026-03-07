@@ -1,7 +1,7 @@
 {
   "name": "mfse-agents",
   "metadata": {
-    "version": "0.1.4",
+    "version": "0.2.1",
     "description": "A collection of specialized agents for Software Factory Michele Ferracin biased"
   },
   "owner": {
@@ -9,6 +9,36 @@
     "email": "michele@micheleferracin.it"
   },
   "plugins": [
+    {
+      "name": "mfse-coresquad-00-facilitator",
+      "source": "./agents/mfse-coresquad-00-facilitator.agent.md",
+      "description": "Lean facilitator that converts vague requests into approved implementation briefs"
+    },
+    {
+      "name": "mfse-coresquad-01-orchestrator",
+      "source": "./agents/mfse-coresquad-01-orchestrator.agent.md",
+      "description": "Lean orchestrator coordinating Architect, Coder, and Reviewer through explicit gates"
+    },
+    {
+      "name": "mfse-coresquad-02-architect",
+      "source": "./agents/mfse-coresquad-02-architect.agent.md",
+      "description": "Lean architect producing minimal design packets and contracts for safe implementation"
+    },
+    {
+      "name": "mfse-coresquad-03-coder",
+      "source": "./agents/mfse-coresquad-03-coder.agent.md",
+      "description": "Focused implementer that executes approved designs with minimal scope and explicit validation"
+    },
+    {
+      "name": "mfse-coresquad-04-reviewer",
+      "source": "./agents/mfse-coresquad-04-reviewer.agent.md",
+      "description": "Pragmatic reviewer focused on blockers, regressions, contract drift, and validation gaps"
+    },
+    {
+      "name": "mfse-coresquad-05-dba-specialist",
+      "source": "./agents/mfse-coresquad-05-dba-specialist.agent.md",
+      "description": "Database specialist for schema, migrations, query safety, integrity, and rollout risks"
+    },
     {
       "name": "mfse-extendedsquad-00-facilitator",
       "source": "./agents/mfse-extendedsquad-00-facilitator.agent.md",

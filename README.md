@@ -4,6 +4,31 @@ A collection of best practices, tools, and resources for software engineering te
 
 The goal is to help teams move faster and deliver better software by combining AI-assisted workflows with concrete tooling: agents that act as specialized engineering personas (requirements shaping, architecture, coding, code review), and scripts that connect to Azure DevOps to track and improve team metrics.
 
+## CoreSquad
+
+`coreSquad` is the simplified, language-agnostic version of the extended squad.
+
+It keeps the same role separation, but removes the extra discovery and escalation lanes from the default flow so agents can collaborate with less overhead and fewer premium requests. The emphasis is on one approved brief, explicit workflow gates, and asking the user for missing decisions before implementation begins.
+
+### Core Pipeline (MFSE-CoreSquad-0x)
+
+| Agent | Description |
+| - | - |
+| [mfse-coresquad-00-facilitator](agents/mfse-coresquad-00-facilitator.agent.md) | Turns a rough request into an approved implementation brief |
+| [mfse-coresquad-01-orchestrator](agents/mfse-coresquad-01-orchestrator.agent.md) | Coordinates the flow through explicit intake, design, build, and review gates |
+| [mfse-coresquad-02-architect](agents/mfse-coresquad-02-architect.agent.md) | Produces a lean design packet with files, contracts, invariants, and validation intent |
+| [mfse-coresquad-05-dba-specialist](agents/mfse-coresquad-05-dba-specialist.agent.md) | Reviews persistence-sensitive changes for schema safety, migrations, queries, and rollout risk |
+| [mfse-coresquad-03-coder](agents/mfse-coresquad-03-coder.agent.md) | Implements the approved plan with minimal scope and explicit verification |
+| [mfse-coresquad-04-reviewer](agents/mfse-coresquad-04-reviewer.agent.md) | Reviews for blockers, regressions, contract drift, and validation gaps |
+
+### Why CoreSquad
+
+- Early clarification gate before architecture and coding
+- Fewer handoffs and no mandatory premium escalation lane
+- Optional DBA gate only when the task touches persistence, schema, or data rollout risk
+- Leaner prompts that tell each role exactly when to stop and ask the user for help
+- Clear agent-to-agent packet format to reduce miscommunication and rework
+
 ## Agents
 
 ### Pipeline (MFSE-ExtendedSquad-0x) — Requirements & Context
@@ -58,6 +83,16 @@ python scripts/azdo_closed_prs.py \
 ## How It Works
 
 The agents follow a structured pipeline that mirrors a real engineering team:
+
+1. **CoreSquad Facilitator** turns a rough idea into an approved implementation brief
+2. **CoreSquad Orchestrator** checks context, creates the task branch, and manages the delivery gates
+3. **CoreSquad Architect** produces a lean implementation packet
+4. **CoreSquad DBA Specialist** joins only for persistence-sensitive work such as schema, migrations, or query risks
+5. **CoreSquad Coder** implements the approved change and runs the required validation
+6. **CoreSquad Reviewer** audits blockers, regressions, validation gaps, and persistence drift when relevant
+7. **ExtendedSquad** remains available when you want dedicated discovery, Azure DevOps flows, or a heavier escalation structure
+
+The extended squad follows a broader pipeline:
 
 1. **Facilitator** turns a rough idea into crisp user stories with acceptance criteria
 2. **Crawlers** gather codebase and project context needed for implementation
