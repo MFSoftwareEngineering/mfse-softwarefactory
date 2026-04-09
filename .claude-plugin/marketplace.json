@@ -85,6 +85,21 @@
       "description": "Ultimate problem solver for exceptionally difficult or bizarre issues"
     },
     {
+      "name": "mfse-minimalsquad-coder",
+      "source": "./agents/minimal-squad/mfse-minimalsquad-coder.agent.md",
+      "description": "Minimal implementer focused on approved plan execution and generic functional bugs"
+    },
+    {
+      "name": "mfse-minimalsquad-reviewer",
+      "source": "./agents/minimal-squad/mfse-minimalsquad-reviewer.agent.md",
+      "description": "Adversarial functional reviewer focused on regressions, edge cases, and unmet acceptance behavior"
+    },
+    {
+      "name": "mfse-minimalsquad-security-reviewer",
+      "source": "./agents/minimal-squad/mfse-minimalsquad-security-reviewer.agent.md",
+      "description": "Adversarial security reviewer focused on vulnerabilities, trust boundaries, and exploit paths"
+    },
+    {
       "name": "mfse-user-stories-writing",
       "source": "./skills/mfse-user-stories-writing",
       "description": "Create effective User Stories with BDD acceptance criteria (Given/When/Then)"

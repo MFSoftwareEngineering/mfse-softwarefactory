@@ -61,7 +61,7 @@ Once complete, your User Story is ready to:
 ## Tips for Success
 
 1. User-centered language: Write for the person using the feature, not developers implementing it
-2. Avoid over-specification: Don't prescribe the technical solution
+2. Keep implementation flexibility: describe the expected outcome and leave room for technical design choices
 3. Testability first: Every criterion should have a clear pass/fail condition
 4. Scenarios over bullets: Gherkin format (Given/When/Then) makes criteria unambiguous
 5. Keep it focused: One user story = one user goal; split large features into smaller stories

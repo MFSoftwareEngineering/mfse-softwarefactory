@@ -29,6 +29,31 @@ It keeps the same role separation, but removes the extra discovery and escalatio
 - Leaner prompts that tell each role exactly when to stop and ask the user for help
 - Clear agent-to-agent packet format to reduce miscommunication and rework
 
+## MinimalSquad
+
+`minimal-squad` is the ultra-lean execution lane for plan-driven implementation.
+
+It includes exactly three sub-agents: one for coding, one for adversarial functional review, and one for adversarial security review.
+
+### Minimal Pipeline (MFSE-MinimalSquad)
+
+| Agent | Description |
+| - | - |
+| [mfse-minimalsquad-coder](minimal-squad/mfse-minimalsquad-coder.agent.md) | Implements only the approved plan and focuses on functional correctness |
+| [mfse-minimalsquad-reviewer](minimal-squad/mfse-minimalsquad-reviewer.agent.md) | Performs adversarial functional review for regressions, edge cases, and unmet behavior |
+| [mfse-minimalsquad-security-reviewer](minimal-squad/mfse-minimalsquad-security-reviewer.agent.md) | Performs adversarial security review for vulnerabilities and trust-boundary issues |
+
+### Forced Plan-Driven Prompt
+
+Use [mfse-minimalsquad-implementation](../prompts/mfse-minimalsquad-implementation.prompt.md) to force the implementation workflow through MinimalSquad.
+
+The prompt is user-facing and blocks generic direct implementation flows by requiring:
+
+- approved plan intake
+- coder execution
+- adversarial functional review
+- adversarial security review
+
 ## Agents
 
 ### Pipeline (MFSE-ExtendedSquad-0x) — Requirements & Context
@@ -112,7 +137,7 @@ copilot plugin install phenixita/mfse-swengineering
 
 ## Project Structure
 
-```
+```text
 agents/          — agent prompt files (<name>.agent.md)
 skills/          — reusable prompt modules referenced by agents
 scripts/         — standalone scripts for Azure DevOps monitoring and tooling

@@ -28,7 +28,7 @@ Your job is to analyze the plan you receive, split work, keep the workflow fluid
 - Delegate to Coder and DBA Specialist at most once each per task.
 - If work starts dragging or new blockers appear after a delegate returns, resolve it in orchestrator first and ask the user rather than spawning another same-role agent.
 - Process exactly one PBI at a time, in the order they appear in the plan.
-- Do not start the next PBI until the current PBI has passed review.
+- Start the next PBI only after the current PBI has passed review.
 
 ## Standard Workflow
 
@@ -42,12 +42,12 @@ Your job is to analyze the plan you receive, split work, keep the workflow fluid
 2. Data gate.
    - If the plan indicates persistence impact, delegate to `MFSE-CoreSquad-DBA-Specialist`.
    - Ask for schema, migration, query, integrity, and rollout guidance sized to the task.
-   - Make this a single DBA pass only; do not call the DBA Specialist again for the same task.
+   - Keep this to a single DBA pass for the same task.
    - If the DBA Specialist returns `BLOCKED`, stop and ask the user the exact missing question before continuing.
    - Build only the current PBI.
 
 3. Build gate.
-   - Make this a single coder pass only; do not call the Coder again for the same task.
+   - Keep this to a single coder pass for the same task.
    - When DBA guidance exists, include it in the build packet and treat it as part of the approved implementation constraints.
    - Build only the current PBI.
 

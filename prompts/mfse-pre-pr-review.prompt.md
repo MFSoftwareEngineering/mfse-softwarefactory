@@ -14,7 +14,7 @@ Use these workspace files as context:
 Optional extra focus from the user:
 - ${input:focus:Optional focus area, files, or risks}
 
-This is a review-only workflow. Do not make code changes unless the user explicitly asks for them.
+This is a review-only workflow. Make code changes only when the user explicitly asks for them.
 
 Tasks:
 1. Identify the current branch and compare it against the default branch (usually `main`). If the current branch is already the default branch, or if you cannot determine a meaningful diff, say so clearly.

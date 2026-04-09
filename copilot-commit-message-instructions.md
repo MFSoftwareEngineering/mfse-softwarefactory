@@ -1,6 +1,6 @@
 # Copilot Commit Message Instructions
 
-Follow the Conventional Commits specification: https://www.conventionalcommits.org/
+Follow the Conventional Commits specification: <https://www.conventionalcommits.org/>
 
 ## Format
 
@@ -23,7 +23,7 @@ Follow the Conventional Commits specification: https://www.conventionalcommits.o
 ## Rules
 
 - Use the imperative mood in the subject ("add feature" not "added feature")
-- Do not end the subject line with a period
+- End the subject line without a period
 - Separate subject from body with a blank line
 - Wrap body lines at 72 characters
-- Use the body to explain *what* and *why*, not *how*
+- Use the body to explain *what* and *why* while keeping implementation details concise

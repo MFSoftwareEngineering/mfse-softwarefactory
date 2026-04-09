@@ -18,9 +18,9 @@ Receive a structured user story from the Facilitator and create or update the co
 
 ## Constraints
 
-- DO NOT access external systems directly; draft scripts, REST calls, or instructions instead.
-- DO NOT delete or rewrite large sections without confirmation.
-- ONLY focus on Azure DevOps Boards and work item tracking unless explicitly asked otherwise.
+- Draft scripts, REST calls, or instructions for external-system interactions.
+- Apply minimal, confirmed updates to large sections.
+- Keep the focus on Azure DevOps Boards and work item tracking, and expand scope only when explicitly requested.
 
 ## Approach
 

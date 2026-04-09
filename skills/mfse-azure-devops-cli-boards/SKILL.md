@@ -132,7 +132,7 @@ az boards work-item create --title "Bug" --type Bug --open
 > **Important — `--fields` quoting rules:**
 > - Each field-value pair MUST be a **separate** quoted argument: `--fields "Field1=Value1" "Field2=Value2"`.
 > - For multi-line HTML fields (`Description`, `AcceptanceCriteria`), use `<br/>` tags for line breaks.
-> - **Do NOT use escaped double quotes (`\"`) inside a `--fields` value** — the Azure CLI parser treats them as argument boundaries and splits the value, causing `"The --fields argument should consist of space separated field=value pairs"` errors.
+> - **Use single quotes for embedded quoting inside a `--fields` value** (instead of escaped double quotes `\"`) — this keeps the Azure CLI parser stable and prevents `"The --fields argument should consist of space separated field=value pairs"` errors.
 > - Instead, use **single quotes** (`'`) for any embedded quoting inside field values (e.g., `'Product A'` instead of `\"Product A\"`).
 > - On **PowerShell (Windows)**, the outer quotes must be double quotes `"..."` and inner quotes must be single quotes `'...'`.
 

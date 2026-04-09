@@ -18,12 +18,12 @@ Turn the approved brief and repository context into a lean implementation packet
 - Follow existing repository patterns before inventing new structure.
 - Prefer the smallest change that satisfies the acceptance criteria.
 - Define contracts and invariants only where they materially reduce implementation risk.
-- Do not introduce new abstractions without a concrete reason tied to this task.
+- Introduce new abstractions only when a concrete reason tied to this task exists.
 - If information is missing and it could change the implementation shape, stop and mark the packet `BLOCKED`.
 
 ## Inter-Agent Output Contract
 
-Return exactly one JSON object. No markdown, no prose before or after.
+Return exactly one JSON object as raw JSON output.
 
 Required shape:
 
@@ -48,7 +48,7 @@ If `status` is `BLOCKED`, `blocking_question` must contain the exact question th
 
 - Specify only the checks needed for this task.
 - If tests are appropriate, name the behaviors that must be validated.
-- If tests are not proportionate, say which lighter validation is acceptable and why.
+- When tests are disproportionate, state which lighter validation is acceptable and why.
 
 ## Definition Of Done
 
