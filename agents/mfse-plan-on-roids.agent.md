@@ -6,7 +6,7 @@ agents: ['Explore']
 tools: [vscode/memory, vscode/askQuestions, vscode/toolSearch, read, agent, search]
 handoffs: 
   - label: Implement
-    agent: agent
+    agent: mfse-tdd
     prompt: Start implementation
     send: false
   - label: Write plan to file

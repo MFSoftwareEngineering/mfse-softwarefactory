@@ -1,0 +1,19 @@
+{
+  "name": "mfse-marketplace",
+  "owner": {
+    "name": "MFSoftwareEngineering",
+    "email": "info@micheleferracin.it"
+  },
+  "metadata": {
+    "description": "Curated plugins for our team",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "mfse-plugin",
+      "description": "AI augmented coding plugin by MFSE",
+      "version": "1.0.0",
+      "source": "./"
+    } 
+  ]
+}
